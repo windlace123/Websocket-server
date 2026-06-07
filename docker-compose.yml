@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: YOURE_CONTAINER_NAME_POSTGRES # <---------- this (Optional edit)
+    restart: always
+    environment:
+      POSTGRES_USER: YOUR_USERNAME_POSTGRES # <---------- this (Optional edit)
+      POSTGRES_PASSWORD: YOUR_PASSWORD_POSTGRES # <---------- this (Optional edit)
+      POSTGRES_DB: YOUR_NAME_POSTGRES # <---------- this (Optional edit)
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+  redis:
+    image: redis:latest
+    container_name: YOUR_CONTAINER_NAME_REDIS # <---------- this (Optional edit)
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --requirepass YOURE_PASSWORD_REDIS # <---------- this (Optional edit)
+      
+volumes:
+  postgres_data:
+  redis_data:
+
+# docker compose up -d
