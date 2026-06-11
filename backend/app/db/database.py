@@ -1,8 +1,8 @@
 from sqlalchemy import Engine, URL, create_engine
 from sqlalchemy.orm import sessionmaker
 
-from backend.app.core.config import settings
-from backend.app.db.models import Base, Player
+from app.core.config import settings
+from app.db.models import Base, Player
 
 
 class Database:

@@ -1,9 +1,9 @@
 from fastapi import APIRouter, WebSocket
 
-from backend.app.core.redis_client import r
-from backend.app.db.database import Database
-from backend.app.schemas.player import parse_position_message
-from backend.app.services.connection_manager import ConnectionManager
+from app.core.redis_client import r
+from app.db.database import Database
+from app.schemas.player import parse_position_message
+from app.services.connection_manager import ConnectionManager
 
 router = APIRouter()
 db = Database()
@@ -31,7 +31,7 @@ async def handler(websocket: WebSocket) -> None:
             data = await websocket.receive_text()
             coords = parse_position_message(data)
             await connection_manager.update_position(player_id, coords)
-
+            
     except Exception as exc:
         print(f"Error: {exc}")
 

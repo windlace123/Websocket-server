@@ -3,8 +3,8 @@ import json
 
 from fastapi import WebSocket
 
-from backend.app.core.redis_client import r
-from backend.app.schemas.player import Position
+from app.core.redis_client import r
+from app.schemas.player import Position
 
 
 class ConnectionManager:
