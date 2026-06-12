@@ -4,10 +4,11 @@
     sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #ede9fe;
+  color: #dbeafe;
   background:
-    radial-gradient(circle at top, rgba(109, 40, 217, 0.25), transparent 32%),
-    linear-gradient(180deg, #0d0b16 0%, #120f20 46%, #09070f 100%);
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.18), transparent 34%),
+    radial-gradient(circle at center top, rgba(14, 165, 233, 0.12), transparent 28%),
+    linear-gradient(180deg, #050b17 0%, #08111f 46%, #040810 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,7 +27,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  color: #ede9fe;
+  color: #dbeafe;
   background: transparent;
 }
 
